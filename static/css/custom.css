@@ -1,0 +1,76 @@
+.dc-table-group {
+  display: none;
+}
+
+th {
+	height: 20px;
+	font-size: 11px;
+	border-bottom: 1.5px solid rgb(107,142,35);
+}
+	
+table, th, td {
+	padding: 7px;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-bottom: 1.5px solid rgb(107,142,35);
+}
+
+canvas {
+	margin-top: 35px;
+}
+
+#wrapper1 {
+	overflow: hidden;
+}	
+
+#table1 {
+	font: 10px sans-serif;
+	width: 450px;
+	margin-right: 5px;
+	float: left;
+}
+
+#graph1 {
+	float: left;
+	width: 250px;
+	height: 150px;
+}
+
+#wrapper2 {
+	overflow: hidden;
+}
+
+#table2 {
+	font: 10px sans-serif;
+	width: 450px;
+	margin-right: 5px;
+	float: left;
+}
+
+#graph2 {
+	float: left;
+	width: 250px;
+	height: 150px;
+}
+
+#wrapper3 {
+	overflow: hidden;
+}
+
+#table3 {
+	font: 10px sans-serif;
+	width: 450px;
+	margin-right: 5px;
+	float: left;
+}
+
+#graph3 {
+	float: left;
+	width: 250px;
+	height: 150px;
+}
