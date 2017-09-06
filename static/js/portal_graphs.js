@@ -163,9 +163,6 @@
 				xAxes: [{
 					gridLines: {
 						offsetGridLines: false
-					},
-					ticks: {
-						fontSize: 8
 					}
 				}]
 			},
@@ -205,9 +202,6 @@
 					xAxes: [{
 						gridLines: {
 							offsetGridLines: false
-						},
-						ticks: {
-							fontSize: 8
 						}
 					}]
 				},
@@ -247,9 +241,6 @@
 					xAxes: [{
 						gridLines: {
 							offsetGridLines: false
-						},
-						ticks: {
-							fontSize: 8
 						}
 					}]
 				},
