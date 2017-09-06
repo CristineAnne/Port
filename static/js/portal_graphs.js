@@ -262,3 +262,7 @@
 				}
 			}
 		});
+
+var c = document.getElementById("port-calls");
+var ctx = c.getContext("2d");
+ctx.font = "8px";
