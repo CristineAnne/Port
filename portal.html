@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Port Statistics</title>
+</head>
+<body class="application">
+	<div id="all" class="panel panel-default">
+	<div class="panel-heading">PORT STATISTICS</div>
+	<div class="panel-body">
+	<div id="wrapper1" class="container">
+		<div id="table1" class="container">
+			<table id="sample_table">
+				<thead>
+					<tr>
+						<th style="width: 250px;">PORT CALLS</th>
+						<th style="width: 100px;">2016</th>
+						<th style="width: 100px;">YTD 2017</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<div id="graph1" class="container">
+			<canvas id="port-calls"></canvas>
+		</div>
+		<!--div id="forButton" class="container">
+			<button onclick="myFunction()">Change chart type</button>
+		</div-->
+	</div>
+	
+	<div id="wrapper2" class="container">
+		<div id="table2" class="container">
+			<table id="sample_table2">
+				<thead>
+					<tr>
+						<th style="width: 250px;">CARGO THROUGHPUT (M.T.)</th>
+						<th style="width: 100px;">2016</th>
+						<th style="width: 100px;">YTD 2017</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<div id="graph2" class="container">
+			<canvas id="cargo-throughput"></canvas>
+		</div>
+	</div>
+	
+	<div id="wrapper3" class="container">
+		<div id="table3" class="container">
+			<table id="sample_table3">
+				<thead>
+					<tr>
+						<th style="width: 250px;">CONTAINER TRAFFIC (in TEU)</th>
+						<th style="width: 100px;">2016</th>
+						<th style="width: 100px;">YTD 2017</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		<div id="graph3" class="container">
+			<canvas id="container-traffic"></canvas>
+		</div>
+	</div>
+	</div>
+	</div>
+	
+  <script src="./static/lib/js/jquery.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="../static/lib/js/d3.min.js"></script>
+  <script src="./static/lib/js/dc.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src='./static/js/portal_graphs.js' type='text/javascript'></script>
+	<script src="./static/js/chart_port.js" type="text/javascript"></script>
+	<script src="./static/js/chart_cargo.js" type="text/javascript"></script>
+	<script src="./static/js/chart_container.js" type="text/javascript"></script>
+	
+	<link href='../static/css/custom.css' rel='stylesheet' type='text/css'>
+	<style type="text/css"></style>
+</body>
 
