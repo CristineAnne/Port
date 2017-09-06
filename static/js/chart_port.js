@@ -32,6 +32,9 @@ data: {
 			labels: {boxWidth: 9,
 					 fontSize: 9,
 					 fontFamily: 'sans-serif'}
+		},
+		animation: {
+			duration: 0
 		}
 	}
 });
