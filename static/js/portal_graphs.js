@@ -56,8 +56,6 @@
 	.size(5)
     table2.render();
 
-
-
 //CONTAINER TRAFFIC (in TEU)
 //Table
   table3
