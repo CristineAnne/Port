@@ -27,10 +27,6 @@ table {
 	border-bottom: 1.5px solid rgb(107,142,35);
 }
 
-canvas {
-	
-}
-
 button {
 	border: none;
 	color: white;
@@ -65,7 +61,7 @@ button {
 	width: 250px;
 	height: 146.5px;
 	margin-top: 35px;
-	margin-bottom: 29.5px;
+	margin-bottom: 24.5px;
 }
 
 #wrapper2 {
@@ -86,7 +82,7 @@ button {
 	width: 250px;
 	height: 146.5px;
 	margin-top: 35px;
-	margin-bottom: 29.5px;
+	margin-bottom: 24.5px;
 }
 
 #wrapper3 {
@@ -107,7 +103,7 @@ button {
 	width: 250px;
 	height: 146.5px;
 	margin-top: 35px;
-	margin-bottom: 29.5px;
+	margin-bottom: 24.5px;
 }
 
 .panel > .panel-heading {
