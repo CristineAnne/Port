@@ -11,7 +11,14 @@ th {
 table, th, td {
 	padding: 7px;
 	text-align: left;
-	margin-bottom: 50px;
+	margin-bottom: 45px;
+}
+
+th:last-child,
+td:last-child,
+th:nth-last-child(2),
+td:nth-last-child(2) {
+    text-align: right;
 }
 
 table {
@@ -22,55 +29,92 @@ table {
 
 canvas {
 	margin-top: 35px;
+	margin-bottom: 29.5px;
+}
+
+button {
+	border: none;
+	color: white;
+	text-align: center;
+	background-color: #555555;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 11px;
+}
+
+#all {
+	border: 1px solid rgb(107,142,35);
+	width: 750px;
+	box-shadow: 3px 3px 3px #C0C0C0;
 }
 
 #wrapper1 {
 	overflow: hidden;
+	margin-left: 15px;
+	margin-right: 10px;
 }	
 
 #table1 {
 	font: 10px sans-serif;
 	width: 450px;
-	margin-right: 5px;
 	float: left;
+	margin-right: 5px;
 }
 
 #graph1 {
 	float: left;
 	width: 250px;
-	height: 150px;
+	height: 146.5px;
 }
 
 #wrapper2 {
 	overflow: hidden;
+	margin-left: 15px;
+	margin-right: 10px;
 }
 
 #table2 {
 	font: 10px sans-serif;
 	width: 450px;
-	margin-right: 5px;
 	float: left;
+	margin-right: 5px;
 }
 
 #graph2 {
 	float: left;
 	width: 250px;
-	height: 150px;
+	height: 146.5px;
 }
 
 #wrapper3 {
 	overflow: hidden;
+	margin-left: 15px;
+	margin-right: 10px;
 }
 
 #table3 {
 	font: 10px sans-serif;
 	width: 450px;
-	margin-right: 5px;
 	float: left;
+	margin-right: 5px;
 }
 
 #graph3 {
 	float: left;
 	width: 250px;
-	height: 150px;
+	height: 146.5px;
+}
+
+.panel > .panel-heading {
+	height: 20px;
+    background-color: rgb(107,142,35);
+	font: 14px sans-serif;
+    color: white;
+	padding-left: 4px;
+	padding-top: 4px;
+	border-radius: 2px 2px 0px 0px;
+}
+
+.panel {
+	border-radius: 3px;
 }
