@@ -23,7 +23,8 @@ data: {
 			xAxes: [{
 				gridLines: {
 					offsetGridLines: false
-				}
+				},
+				ticks: { fontSize: 8 }
 			}]
 		},
 		legend: {
