@@ -135,7 +135,9 @@
 	containertraffic.forEach(function(d){
         containertrafficCyTotal.push(d["Total Container Traffic (2017)"]);
     });
-	
+
+//Charts
+//PORT CALLS	
 	new Chart(document.getElementById("port-calls"), {
 	type: 'horizontalBar',
 	data: {
@@ -161,6 +163,9 @@
 				xAxes: [{
 					gridLines: {
 						offsetGridLines: false
+					},
+					ticks: {
+						fontSize: 8
 					}
 				}]
 			},
@@ -173,7 +178,8 @@
 			}
 		}
 	});
-	
+
+//CARGO THROUGHPUT	
 	new Chart(document.getElementById("cargo-throughput"), {
 		type: 'horizontalBar',
 		data: {
@@ -199,6 +205,9 @@
 					xAxes: [{
 						gridLines: {
 							offsetGridLines: false
+						},
+						ticks: {
+							fontSize: 8
 						}
 					}]
 				},
@@ -211,7 +220,8 @@
 				}
 			}
 		});
-	
+
+//CONTAINER TRAFFIC		
 	new Chart(document.getElementById("container-traffic"), {
 		type: 'horizontalBar',
 		data: {
@@ -237,6 +247,9 @@
 					xAxes: [{
 						gridLines: {
 							offsetGridLines: false
+						},
+						ticks: {
+							fontSize: 8
 						}
 					}]
 				},
