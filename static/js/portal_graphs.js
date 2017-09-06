@@ -25,6 +25,7 @@
 		containerCyDim = ndx.dimension(function(d){return +d["Total Container Traffic (2017)"];}),
 		rank = function (p) { return "" };		
 
+//PORT CALLS
 //Table
   var colspan = null;
   table
@@ -58,7 +59,6 @@
 
 
 //CONTAINER TRAFFIC (in TEU)
-
 //Table
   table3
     .width(768)
@@ -73,7 +73,8 @@
 	.size(5)
     table3.render();
 
-// sort records by (1)Port Calls, (2)Cargo Throughput, (3)Container Traffic, then create array of Port Name, PY, CY
+
+// Sort records by (1)Port Calls, (2)Cargo Throughput, (3)Container Traffic, then create array of Port Name, PY, CY
 // (1)Port Calls
 	var portcalls = records.sort(function (a, b) {
 	  return b["Total Port Calls (2017)"] - a["Total Port Calls (2017)"];
