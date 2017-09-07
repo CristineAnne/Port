@@ -272,7 +272,7 @@ totalValues = [totalPortCallsPY, totalPortCallsCY, totalCargothroughputPyTotal, 
 othersValues = [othersPortCallsPY, othersPortCallsCY, othersCargothroughputPyTotal, othersCargothroughputCyTotal, othersContainertrafficPyTotal, othersContainertrafficCyTotal]
 console.log(tables[0] + ", " + othersValues + ", " + tables.length)
 for (i = 0; i < tables.length; i++) { 
-var row = window[tables[i]].insertRow(7);
+var row = eval(tables[i]).insertRow(7);
 var cell1 = row.insertCell(0);
 var cell2 = row.insertCell(1);
 var cell3 = row.insertCell(2);
@@ -281,7 +281,7 @@ cell1.innerHTML = "OTHERS";
 cell2.innerHTML = othersValues[i*2];
 cell3.innerHTML = othersValues[i*2+1];
 
-var row2 = window[tables[i]].insertRow(8);
+var row2 = eval(tables[i]).insertRow(8);
 var totalcell1 = row2.insertCell(0);
 var totalcell2 = row2.insertCell(1);
 var totalcell3 = row2.insertCell(2);
