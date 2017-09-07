@@ -21,6 +21,10 @@ td:nth-last-child(2) {
     text-align: right;
 }
 
+tr:nth-last-child(2) {
+	font-weight: bold;
+}
+
 table {
 	table-layout: fixed;
 	border-collapse: collapse;
