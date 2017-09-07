@@ -1,5 +1,6 @@
 d3.json("input/PortStats.json", function(error, json) {
               if (error) return console.warn(error);
+	var records = json;
 //Sample
 	var table = dc.dataTable("#sample_table");
 	var table2 = dc.dataTable("#sample_table2");
