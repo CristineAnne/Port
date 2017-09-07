@@ -263,7 +263,6 @@ var totalCargothroughputCyTotal = cargothroughputCyTotal.reduce((a, b) => a + b,
 var totalContainertrafficPyTotal = containertrafficPyTotal.reduce((a, b) => a + b, 0);
 var totalContainertrafficCyTotal = containertrafficCyTotal.reduce((a, b) => a + b, 0);
 
-console.log(JSON.stringify(portcallsPyTotal.slice(5,10))+ ", " + othersPortCallsPY + ", " + totalPortCallsPY)
 var dataTable1 = document.getElementById("sample_table");
 var dataTable2= document.getElementById("sample_table2");
 var dataTable3= document.getElementById("sample_table3");
