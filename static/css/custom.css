@@ -21,7 +21,7 @@ td:nth-last-child(2) {
     text-align: right;
 }
 
-tr:nth-last-child(2) {
+tr:last-child {
 	font-weight: bold;
 }
 
