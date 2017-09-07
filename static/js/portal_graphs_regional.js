@@ -315,6 +315,7 @@ var dataTable3= document.getElementById("sample_table3");
 tables = ["dataTable1", "dataTable2", "dataTable3"]
 totalValues = [totalPortCallsPY, totalPortCallsCY, totalCargothroughputPyTotal, totalCargothroughputCyTotal, totalContainertrafficPyTotal, totalContainertrafficCyTotal]
 for (i = 0; i < tables.length; i++) { 
+console.log(tables[i])
 var row = window[tables[i]].insertRow(7);
 var cell1 = row.insertCell(0);
 var cell2 = row.insertCell(1);
