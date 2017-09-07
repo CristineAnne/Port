@@ -314,7 +314,6 @@ var dataTable3= document.getElementById("sample_table3");
 
 tables = ["dataTable1", "dataTable2", "dataTable3"]
 totalValues = [totalPortCallsPY, totalPortCallsCY, totalCargothroughputPyTotal, totalCargothroughputCyTotal, totalContainertrafficPyTotal, totalContainertrafficCyTotal]
-console.log(tables[0] + ", " + othersValues + ", " + tables.length)
 for (i = 0; i < tables.length; i++) { 
 var row = window[tables[i]].insertRow(7);
 var cell1 = row.insertCell(0);
@@ -325,5 +324,4 @@ cell1.innerHTML = "TOTAL";
 cell2.innerHTML = totalValues[i*2];
 cell3.innerHTML = totalValues[i*2+1];
 }
-
 });
