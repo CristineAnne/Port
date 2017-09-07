@@ -1,19 +1,10 @@
+d3.json("input/PortStats.json", function(error, json) {
+              if (error) return console.warn(error);
 //Sample
 	var table = dc.dataTable("#sample_table");
 	var table2 = dc.dataTable("#sample_table2");
 	var table3 = dc.dataTable("#sample_table3");
 
-	var records = [{"Port Category (Regional)":"SOUTHERN LUZON","Port Management Office":"PMO Batangas","Port Name":"BATANGAS","Total Port Calls (2017)":44113,"Total Port Calls (2016)":44416,"Total Cargo Throughput (2017)":22612133,"Total Cargo Throughput (2016)":24931942,"Total Container Traffic (2017)":188077,"Total Container Traffic (2016)":135164},
-	{"Port Category (Regional)":"SOUTHERN LUZON","Port Management Office":"PMO Bicol","Port Name":"LEGASPI","Total Port Calls (2017)":18390,"Total Port Calls (2016)":22366,"Total Cargo Throughput (2017)":1901353,"Total Cargo Throughput (2016)":2172722,"Total Container Traffic (2017)":0,"Total Container Traffic (2016)":16},
-	{"Port Category (Regional)":"MNL\\/NORTHERN LUZON","Port Management Office":"NCR NORTH","Port Name":"PIER 2 - BATANGAS","Total Port Calls (2017)":6067,"Total Port Calls (2016)":5209,"Total Cargo Throughput (2017)":28301824,"Total Cargo Throughput (2016)":22304714,"Total Container Traffic (2017)":1137455,"Total Container Traffic (2016)":1043705},
-	{"Port Category (Regional)":"MNL\\/NORTHERN LUZON","Port Management Office":"NCR SOUTH","Port Name":"PIER 3 - NCR SOUTH","Total Port Calls (2017)":3855,"Total Port Calls (2016)":3883,"Total Cargo Throughput (2017)":7472825,"Total Cargo Throughput (2016)":7297102,"Total Container Traffic (2017)":877593,"Total Container Traffic (2016)":889464},
-	{"Port Category (Regional)":"VISAYAS","Port Management Office":"PMO Bohol","Port Name":"OTAGBILARAN","Total Port Calls (2017)":24251,"Total Port Calls (2016)":24841,"Total Cargo Throughput (2017)":4225331,"Total Cargo Throughput (2016)":3929391,"Total Container Traffic (2017)":26777,"Total Container Traffic (2016)":24619},
-	{"Port Category (Regional)":"VISAYAS","Port Management Office":"PMO Panay\\/Guimaras","Port Name":"FORT SAN PEDRO","Total Port Calls (2017)":27130,"Total Port Calls (2016)":24834,"Total Cargo Throughput (2017)":8508897,"Total Cargo Throughput (2016)":9820302,"Total Container Traffic (2017)":148438,"Total Container Traffic (2016)":133538},
-	{"Port Category (Regional)":"SOUTHERN MINDANAO","Port Management Office":"PMO Cotabato","Port Name":"COTABATO","Total Port Calls (2017)":157,"Total Port Calls (2016)":125,"Total Cargo Throughput (2017)":98912,"Total Cargo Throughput (2016)":87199,"Total Container Traffic (2017)":0,"Total Container Traffic (2016)":0},
-	{"Port Category (Regional)":"SOUTHERN MINDANAO","Port Management Office":"PMO Davao","Port Name":"SASA WHARF","Total Port Calls (2017)":32063,"Total Port Calls (2016)":32372,"Total Cargo Throughput (2017)":12999706,"Total Cargo Throughput (2016)":11602108,"Total Container Traffic (2017)":594497,"Total Container Traffic (2016)":651448},
-	{"Port Category (Regional)":"NORTHERN MINDANAO","Port Management Office":"PMO Agusan","Port Name":"NASIPIT","Total Port Calls (2017)":1281,"Total Port Calls (2016)":1021,"Total Cargo Throughput (2017)":6188521,"Total Cargo Throughput (2016)":4742824,"Total Container Traffic (2017)":34442,"Total Container Traffic (2016)":32150},
-	{"Port Category (Regional)":"NORTHERN MINDANAO","Port Management Office":"PMO Surigao","Port Name":"SURIGAO","Total Port Calls (2017)":10401,"Total Port Calls (2016)":9698,"Total Cargo Throughput (2017)":30533369,"Total Cargo Throughput (2016)":35435136,"Total Container Traffic (2017)":6943,"Total Container Traffic (2016)":5428}];
-					
 //Dimensions
     var ndx = crossfilter(records),
 		portDim = ndx.dimension(function(d){return d["Port Name"];}),
@@ -257,3 +248,46 @@
 var c = document.getElementById("port-calls");
 var ctx = c.getContext("2d");
 ctx.font = "8px";
+
+var othersPortCallsPY = portcallsPyTotal.slice(5,10).reduce((a, b) => a + b, 0);
+var othersPortCallsCY = portcallsCyTotal.slice(5,10).reduce((a, b) => a + b, 0);
+var othersCargothroughputPyTotal = cargothroughputPyTotal.slice(5,10).reduce((a, b) => a + b, 0);
+var othersCargothroughputCyTotal = cargothroughputCyTotal.slice(5,10).reduce((a, b) => a + b, 0);
+var othersContainertrafficPyTotal = containertrafficPyTotal.slice(5,10).reduce((a, b) => a + b, 0);
+var othersContainertrafficCyTotal = containertrafficCyTotal.slice(5,10).reduce((a, b) => a + b, 0);
+var totalPortCallsPY = portcallsPyTotal.reduce((a, b) => a + b, 0);
+var totalPortCallsCY = portcallsCyTotal.reduce((a, b) => a + b, 0);
+var totalCargothroughputPyTotal = cargothroughputPyTotal.reduce((a, b) => a + b, 0);
+var totalCargothroughputCyTotal = cargothroughputCyTotal.reduce((a, b) => a + b, 0);
+var totalContainertrafficPyTotal = containertrafficPyTotal.reduce((a, b) => a + b, 0);
+var totalContainertrafficCyTotal = containertrafficCyTotal.reduce((a, b) => a + b, 0);
+
+console.log(JSON.stringify(portcallsPyTotal.slice(5,10))+ ", " + othersPortCallsPY + ", " + totalPortCallsPY)
+var dataTable1 = document.getElementById("sample_table");
+var dataTable2= document.getElementById("sample_table2");
+var dataTable3= document.getElementById("sample_table3");
+
+tables = ["dataTable1", "dataTable2", "dataTable3"]
+totalValues = [totalPortCallsPY, totalPortCallsCY, totalCargothroughputPyTotal, totalCargothroughputCyTotal, totalContainertrafficPyTotal, totalContainertrafficCyTotal]
+othersValues = [othersPortCallsPY, othersPortCallsCY, othersCargothroughputPyTotal, othersCargothroughputCyTotal, othersContainertrafficPyTotal, othersContainertrafficCyTotal]
+console.log(tables[0] + ", " + othersValues + ", " + tables.length)
+for (i = 0; i < tables.length; i++) { 
+var row = window[tables[i]].insertRow(7);
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+
+cell1.innerHTML = "OTHERS";
+cell2.innerHTML = othersValues[i*2];
+cell3.innerHTML = othersValues[i*2+1];
+
+var row2 = window[tables[i]].insertRow(8);
+var totalcell1 = row2.insertCell(0);
+var totalcell2 = row2.insertCell(1);
+var totalcell3 = row2.insertCell(2);
+
+totalcell1.innerHTML = "TOTAL";
+totalcell2.innerHTML = totalValues[i*2];
+totalcell3.innerHTML = totalValues[i*2+1];
+}
+});
