@@ -1,5 +1,5 @@
 //Sample
-d3.json("../input/PortStats.json", function(error, json) {
+d3.json("PortStats.json", function(error, json) {
               if (error) return console.warn(error);
 
 	var table = dc.dataTable("#sample_table");
