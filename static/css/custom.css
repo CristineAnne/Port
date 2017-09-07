@@ -43,62 +43,20 @@ button {
 	box-shadow: 3px 3px 3px #C0C0C0;
 }
 
-#wrapper1 {
+#wrapper1, #wrapper2, #wrapper3 {
 	overflow: hidden;
 	margin-left: 15px;
 	margin-right: 10px;
 }	
 
-#table1 {
+#table1, #table2, #table3 {
 	font: 10px sans-serif;
 	width: 450px;
 	float: left;
 	margin-right: 5px;
 }
 
-#graph1 {
-	float: left;
-	width: 250px;
-	height: 146.5px;
-	margin-top: 35px;
-	margin-bottom: 24.5px;
-}
-
-#wrapper2 {
-	overflow: hidden;
-	margin-left: 15px;
-	margin-right: 10px;
-}
-
-#table2 {
-	font: 10px sans-serif;
-	width: 450px;
-	float: left;
-	margin-right: 5px;
-}
-
-#graph2 {
-	float: left;
-	width: 250px;
-	height: 146.5px;
-	margin-top: 35px;
-	margin-bottom: 24.5px;
-}
-
-#wrapper3 {
-	overflow: hidden;
-	margin-left: 15px;
-	margin-right: 10px;
-}
-
-#table3 {
-	font: 10px sans-serif;
-	width: 450px;
-	float: left;
-	margin-right: 5px;
-}
-
-#graph3 {
+#graph1, #graph2, #graph3 {
 	float: left;
 	width: 250px;
 	height: 146.5px;
