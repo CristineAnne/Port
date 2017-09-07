@@ -301,4 +301,29 @@ d3.json("input/PortStats.json", function(error, json) {
 				}
 			}
 		});
+var totalPortCallsPY = portcallsPyTotal.reduce((a, b) => a + b, 0);
+var totalPortCallsCY = portcallsCyTotal.reduce((a, b) => a + b, 0);
+var totalCargothroughputPyTotal = cargothroughputPyTotal.reduce((a, b) => a + b, 0);
+var totalCargothroughputCyTotal = cargothroughputCyTotal.reduce((a, b) => a + b, 0);
+var totalContainertrafficPyTotal = containertrafficPyTotal.reduce((a, b) => a + b, 0);
+var totalContainertrafficCyTotal = containertrafficCyTotal.reduce((a, b) => a + b, 0);
+
+var dataTable1 = document.getElementById("sample_table");
+var dataTable2= document.getElementById("sample_table2");
+var dataTable3= document.getElementById("sample_table3");
+
+tables = ["dataTable1", "dataTable2", "dataTable3"]
+totalValues = [totalPortCallsPY, totalPortCallsCY, totalCargothroughputPyTotal, totalCargothroughputCyTotal, totalContainertrafficPyTotal, totalContainertrafficCyTotal]
+console.log(tables[0] + ", " + othersValues + ", " + tables.length)
+for (i = 0; i < tables.length; i++) { 
+var row = window[tables[i]].insertRow(7);
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+
+cell1.innerHTML = "TOTAL";
+cell2.innerHTML = totalValues[i*2];
+cell3.innerHTML = totalValues[i*2+1];
+}
+
 });
