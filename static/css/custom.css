@@ -23,6 +23,7 @@ td:nth-last-child(2) {
 
 tr:nth-last-child(2) {
 	font-weight: bold;
+	border-top: 1.5px solid rgb(107,142,35);
 }
 
 table {
