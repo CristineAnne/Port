@@ -1,4 +1,5 @@
-{  "Port Calls": [
+{
+  "Port Calls": [
     {
       "Port District Office": "SOUTHERN LUZON",
       "Port Management Office": "PMO Batangas",
@@ -494,7 +495,7 @@
       "2016 Oct": 34910,
       "2016 Nov": 35131,
       "2016 Dec": 35065,
-      "2017 TOTAL":201115,
+      "2017 TOTAL": 201115,
       "2017 Jan": 29422,
       "2017 Feb": 35174,
       "2017 Mar": 36873,
