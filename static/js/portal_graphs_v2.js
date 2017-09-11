@@ -284,7 +284,7 @@ cell1.innerHTML = "OTHERS";
 cell2.innerHTML = othersValues[i*2].toLocaleString();
 cell3.innerHTML = othersValues[i*2+1].toLocaleString();
 
-var row2 = window[tables[i]].insertRow(8);
+var row2 = eval[tables[i]].insertRow(8);
 var totalcell1 = row2.insertCell(0);
 var totalcell2 = row2.insertCell(1);
 var totalcell3 = row2.insertCell(2);
