@@ -112,7 +112,6 @@ d3.json("input/PortStats_v2.json", function(error, json) {
 	}
 	if (x==0) {
 	        res.__array.push(res[obj.Organizational_Role] = obj);
-		console.log("There are " + "Region:" + obj["Port District Office"] + "  Port Calls:" + obj["2016 TOTAL"]);
 }
     return res;
 }, {__array:[]}).__array
@@ -128,7 +127,6 @@ d3.json("input/PortStats_v2.json", function(error, json) {
 	}
 	if (x==0) {
 	        res.__array.push(res[obj.Organizational_Role] = obj);
-		console.log("There are " + "Region:" + obj["Port District Office"] + "  Cargo Throughput:" + obj["2016 TOTAL"]);
 }
     return res;
 }, {__array:[]}).__array
@@ -144,7 +142,6 @@ d3.json("input/PortStats_v2.json", function(error, json) {
 	}
 	if (x==0) {
 	        res.__array.push(res[obj.Organizational_Role] = obj);
-		console.log("There are " + "Region:" + obj["Port District Office"] + "  Container Traffic:" + obj["2016 TOTAL"]);
 }
     return res;
 }, {__array:[]}).__array
@@ -172,9 +169,6 @@ d3.json("input/PortStats_v2.json", function(error, json) {
 		portcalls.forEach(function(d){
         portcallsCyTotal.push(d["2017 TOTAL"]);
     });
-
-	console.log(JSON.stringify(portcalls));	
-	console.log(JSON.stringify(portcallsCyTotal.slice(0,5)));		
 	
 // (2)Cargo Throughput
 	var cargothroughput = recordsByRegionCThroughput.sort(function (a, b) {
